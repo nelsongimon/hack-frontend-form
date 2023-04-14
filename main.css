@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Source+Code+Pro:wght@400;800&display=swap");
+
+:root {
+	--font: "Montserrat", Arial, sans-serif;
+	--color: #474544;
+	--bgcolor: #f2f3eb;
+}
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+html,
+body {
+	height: 100%;
+	background: var(--bgcolor);
+	font-family: var(--font);
+}
+.form-container {
+	height: 100%;
+	display: grid;
+	place-items: center;
+}
+.form {
+	width: 650px;
+	border: solid var(--color) 3px;
+	padding: 1.125rem 2.1875rem;
+}
+.form_header h1 {
+	font-family: inherit;
+	font-weight: 700;
+	position: relative;
+	color: var(--color);
+	font-size: 1.75rem;
+	text-align: center;
+	text-transform: uppercase;
+	letter-spacing: 0.25rem;
+}
+.form_header h1::before {
+	content: "";
+	width: 8px;
+	height: 8px;
+	background-color: var(--color);
+	position: absolute;
+	border-radius: 50%;
+	left: 75px;
+	top: 50%;
+	transform: translateY(-50%);
+}
+.form_header h1::after {
+	content: "";
+	width: 8px;
+	height: 8px;
+	background-color: var(--color);
+	position: absolute;
+	border-radius: 50%;
+	right: 75px;
+	top: 50%;
+	transform: translateY(-50%);
+}
+input,
+select,
+textarea {
+	font-family: inherit;
+	width: 100%;
+	border: none;
+	padding: 0.625rem 0.3125rem;
+	border-bottom: solid 2px var(--color);
+	color: var(--color);
+	outline: none;
+	background-color: var(--bgcolor);
+	font-size: 1.0625rem;
+	text-transform: uppercase;
+}
+textarea {
+	resize: none;
+	height: 150px;
+}
+select {
+	appearance: none;
+	background: url("https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-arrow-down-32.png")
+		no-repeat right;
+}
+::placeholder {
+	color: var(--color);
+	text-transform: uppercase;
+	font-weight: 400;
+}
+.form_row {
+	margin: 1.25rem 0;
+}
+.form_group {
+	display: grid;
+	grid-gap: 2.5rem;
+	grid-template-columns: 1fr 1fr;
+}
+.form button {
+	font-family: inherit;
+	text-transform: uppercase;
+	padding: 1.25rem 1.875rem;
+	border: solid 2px var(--color);
+	font-size: 0.875rem;
+	font-weight: 700;
+	background-color: var(--bgcolor);
+	cursor: pointer;
+	transition: opacity 0.2s ease-in-out;
+	opacity: 1;
+	margin-bottom: 3.125rem;
+}
+.form button:hover {
+	opacity: 0.7;
+}
+.form_line {
+	height: 2px;
+	width: 60px;
+	background-color: var(--color);
+	margin: auto;
+	margin-top: 1.125rem;
+	margin-bottom: 3.125rem;
+}
